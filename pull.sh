@@ -2,7 +2,7 @@
 
 git pull origin
 
-sudo cp index.html /var/www/html/index.html
+cp index.html /var/www/html/index.html
 
 timestamp=$(date +"%Y-%m-%d_%H-%M")
 
