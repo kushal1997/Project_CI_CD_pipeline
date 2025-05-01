@@ -1,6 +1,6 @@
-sudo systemctl stop nginx
+#!/bin/bash
 
-git pull origin
+sudo systemctl stop nginx
 
 [ ! -f index.html ] && sudo touch index.html
 
@@ -27,3 +27,4 @@ sudo systemctl status nginx
 echo "================ NGINX successfully updated open it using your ip address ==================="
 
 ip a | grep inet | grep eth0 | awk '{print $2}' | cut -d/ -f1
+ 
