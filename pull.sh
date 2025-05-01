@@ -1,8 +1,13 @@
-
+sudo systemctl stop nginx
 
 git pull origin
 
-cp index.html /var/www/html/index.html
+[ ! -f index.html ] && sudo touch index.html
+
+# [ -f index.html ] && echo " =========== index file is there=========="
+# [ ! -f index.html ] && echo " =========== index file is not there=========="
+
+sudo cp index.html /var/www/html/index.html
 
 timestamp=$(date +"%Y-%m-%d_%H-%M")
 
