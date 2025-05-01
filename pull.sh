@@ -2,7 +2,13 @@
 
 git pull origin
 
-cp index.html /var/www/html/index.html
+sudo cp index.html /var/www/html/index.html
+
+timestamp=$(date +"%Y-%m-%d_%H-%M")
+
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default_${timestamp}.old
+
+sudo cp sample_default_nginix_config /etc/nginx/sites-available/default
 
 sudo apt install nginx
 
