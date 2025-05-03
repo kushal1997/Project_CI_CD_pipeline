@@ -1,5 +1,5 @@
 git pull origin
 
-chmod +x pull.sh
+chmod +x after_run.sh
 
-./pull.sh
+sh after_run.sh
