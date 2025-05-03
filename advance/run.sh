@@ -1,5 +1,11 @@
-git pull origin
+#!/bin/bash
 
-chmod +x after_run.sh
+if git pull origin dev; then
+	echo "===================== Successful PULL request ======================="
 
-./after_run.sh
+	chmod +x after_run.sh
+
+	sh after_run.sh
+else
+	echo "================ ERROR: Pull request is unsuccessful ========================"
+fi
